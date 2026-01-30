@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TravelTrucks 🚐
+
+A modern camper rental application built with Next.js. Browse, filter, and book your perfect campervan for your next adventure.
+
+## Features
+
+- **Camper Catalog** — Browse available campervans with detailed specifications
+- **Advanced Filtering** — Filter by location, vehicle type (Alcove, Fully Integrated, Van), and equipment (AC, Kitchen, Bathroom, TV, etc.)
+- **Detailed Camper Pages** — View image galleries, features, specifications, and customer reviews
+- **Booking System** — Request bookings directly from camper detail pages
+- **Favorites** — Save campers to favorites (persisted in local storage)
+- **User Authentication** — Sign up and sign in with Supabase
+
+## Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) 16 with App Router
+- **Language**: TypeScript
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) v4
+- **State Management**: [Redux Toolkit](https://redux-toolkit.js.org/) with [Redux Persist](https://github.com/rt2zz/redux-persist)
+- **Authentication**: [Supabase](https://supabase.com/)
+- **HTTP Client**: Axios
+- **Notifications**: React Hot Toast
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18.x or higher
+- npm, yarn, pnpm, or bun
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```env
+NEXT_PUBLIC_API_URL=your_api_url
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Install dependencies
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Run development server
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-To learn more about Next.js, take a look at the following resources:
+### Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command         | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start development server |
+| `npm run build` | Build for production     |
+| `npm run start` | Start production server  |
+| `npm run lint`  | Run ESLint               |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── auth/              # Auth callback route
+│   ├── catalog/           # Catalog & camper detail pages
+│   ├── login/             # Login page
+│   └── register/          # Registration page
+├── components/
+│   ├── camper/            # Camper-related components
+│   ├── common/            # Reusable UI components
+│   └── providers/         # Context providers
+├── hooks/
+│   ├── actions/           # Redux action hooks
+│   └── selectors/         # Redux selector hooks
+├── lib/
+│   ├── api/               # API functions
+│   ├── constants/         # App constants
+│   ├── supabase/          # Supabase client setup
+│   └── utils/             # Utility functions
+└── redux/
+    ├── campers/           # Campers state slice
+    ├── favorites/         # Favorites state slice
+    └── filters/           # Filters state slice
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is private and not licensed for public use.
