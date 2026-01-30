@@ -86,6 +86,13 @@ src/
     └── filters/           # Filters state slice
 ```
 
+## Tradeoffs / assumptions
+
+- I left TODOs for some features worth implementing like central error handling, or booking request implementation.
+- The app is not fully responsive, but I wanted to focus more on the core features and functionality.
+- Since we use Supabase for authentication we could store some user data in the database (like favorites, bookings, etc.), but I decided to keep it simple for now.
+- There's more room for improvement like: test coverage, precommit hooks, CI/CD pipeline, etc.
+
 ## License
 
 This project is private and not licensed for public use.
