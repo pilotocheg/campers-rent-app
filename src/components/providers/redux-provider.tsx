@@ -3,7 +3,7 @@
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from '@/redux/store';
-import Loader from '@/components/common/loader';
+import PageLoader from '@/components/common/page-loader';
 
 interface ReduxProviderProps {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ interface ReduxProviderProps {
 export default function ReduxProvider({ children }: ReduxProviderProps) {
   return (
     <Provider store={store}>
-      <PersistGate loading={<Loader />} persistor={persistor}>
+      <PersistGate loading={<PageLoader />} persistor={persistor}>
         {children}
       </PersistGate>
     </Provider>

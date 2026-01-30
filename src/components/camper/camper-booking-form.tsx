@@ -38,6 +38,7 @@ export default function CamperBookingForm() {
       return;
     }
 
+    // TODO: Implement booking request
     console.log('Booking Data:', formData);
     toast.success('Booking request sent successfully!');
 

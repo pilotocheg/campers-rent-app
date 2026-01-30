@@ -15,7 +15,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'TravelTrucks - Campers of your dreams',
-  description: 'Find and rent the perfect campervan for your next adventure',
+  description: 'Find and rent the perfect camper for your next adventure',
 };
 
 export default function RootLayout({
