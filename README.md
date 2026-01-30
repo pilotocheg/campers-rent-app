@@ -35,7 +35,7 @@ Create a `.env.local` file in the root directory with the following variables:
 ```env
 NEXT_PUBLIC_API_URL=your_api_url
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+NEXT_PUBLIC_SUPABASE_KEY=your_supabase_key
 ```
 
 ### Installation
